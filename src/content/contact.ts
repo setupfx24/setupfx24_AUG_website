@@ -7,12 +7,23 @@
  */
 export const CONTACT = {
   email: "setupfx24@gmail.com",
-  whatsappDisplay: "+1 (908) 228-0305",
+  whatsappDisplay: "+33 7 59 15 99 87",
   /** wa.me needs the number as digits only, including the country code. */
-  whatsappHref: "https://wa.me/19082280305",
+  whatsappHref: "https://wa.me/33759159987",
   office:
     "9364hn 3 Fitzroy Place, Sauchiehall Street, Glasgow City Centre, G3 7RH, United Kingdom",
 };
+
+/**
+ * Pre-typed into the visitor's WhatsApp composer. They still have to press
+ * send — wa.me cannot dispatch a message on someone's behalf.
+ */
+export const WHATSAPP_GREETING = "Hello";
+
+/** Opens a WhatsApp chat with the greeting already sitting in the input. */
+export const WHATSAPP_CHAT_HREF = `${CONTACT.whatsappHref}?text=${encodeURIComponent(
+  WHATSAPP_GREETING,
+)}`;
 
 export type ContactRow = {
   label: string;

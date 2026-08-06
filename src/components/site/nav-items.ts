@@ -16,5 +16,6 @@ export const NAV_ITEMS = [
   { label: "Platforms", href: "/platforms", caret: false },
   { label: "Services", href: "/services", caret: true },
   { label: "About", href: "/about", caret: false },
+  { label: "Team", href: "/team", caret: false },
   { label: "Contact", href: "/contact", caret: false },
 ];

@@ -76,7 +76,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "white-label-deployment",
-    rowTitle: "White-Label Deployment",
+    rowTitle: "White Label Solution",
     rowDesc: "Fully branded platforms delivered under your identity.",
     seo: {
       title: "White-Label Trading Platform Deployment | SetupFX24",

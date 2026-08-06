@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { ChipRow } from "./chip-row";
@@ -8,6 +9,10 @@ type Cta = { label: string; href?: string; modal?: boolean };
 /**
  * Inner-page hero. Same eyebrow / title / pill vocabulary as the home hero,
  * without the full-viewport liquid canvas that only the landing page carries.
+ *
+ * `bgImage` fills the band with a photograph behind a light scrim. The scrim is
+ * deliberately white rather than dark so every text colour — and the header
+ * sitting over it — stays exactly as it is on the plain white heroes.
  */
 export function PageHero({
   eyebrow,
@@ -15,15 +20,32 @@ export function PageHero({
   sub,
   ctas = [],
   chips,
+  bgImage,
 }: {
   eyebrow: string;
   title: string[];
   sub: string;
   ctas?: Cta[];
   chips?: string[];
+  bgImage?: string;
 }) {
   return (
-    <section className="page-hero">
+    <section className={`page-hero${bgImage ? " page-hero--media" : ""}`}>
+      {bgImage && (
+        <>
+          {/* Decorative: the heading already carries the meaning. */}
+          <Image
+            className="page-hero__bg"
+            src={bgImage}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
+          <div className="page-hero__scrim" aria-hidden="true" />
+        </>
+      )}
+
       <div className="shell page-hero__inner">
         <div className="reveal" style={vars({ "--ty": "10px" })}>
           <span className="eyebrow">{eyebrow}</span>

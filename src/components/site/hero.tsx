@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { vars } from "./css-vars";
+import { WHATSAPP_CHAT_HREF } from "@/content/contact";
 
 /** One per carousel slide — swapped in step with the copy by site-effects. */
 const TILE_IMAGES = [
@@ -66,11 +67,14 @@ export function Hero() {
             data-gated
             style={vars({ "--ty": "10px", "--d": "750ms" })}
           >
-            <button
+            {/* Opens WhatsApp rather than the request modal — the other
+                "Book a Free Demo" buttons on the site still use [data-modal]. */}
+            <a
               suppressHydrationWarning
               className="pill pill--dark pill--arrow"
-              type="button"
-              data-modal
+              href={WHATSAPP_CHAT_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="pill__scale" data-hover="pillScale">
                 <span className="pill__inner">
@@ -82,7 +86,7 @@ export function Hero() {
                   </span>
                 </span>
               </span>
-            </button>
+            </a>
             <button
               suppressHydrationWarning
               className="pill pill--outline"

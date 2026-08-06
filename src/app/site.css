@@ -1842,6 +1842,20 @@
         font-size: 0.875rem;
         color: rgba(17, 17, 17, 0.55);
       }
+      /* Single-column prose with no companion media. The title and body keep
+         their narrow measures for readability, so centring them in the shell
+         reads better than leaving the right half empty. */
+      .prose {
+        text-align: center;
+      }
+      .prose .services__title,
+      .prose .section__intro {
+        margin-inline: auto;
+      }
+      /* 16ch orphans the last word once the block is centred. */
+      .prose .services__title {
+        max-width: 24ch;
+      }
       @media (min-width: 640px) {
         .section__head {
           margin-bottom: 3.5rem;
@@ -2114,11 +2128,23 @@
          HEADER AUTH ACTIONS — same control scale as .menu-btn so the header
          bar keeps its proportions.
          =================================================================== */
+      /* Hidden on phones. Below 640px the root font is 4.44vw, so the logo,
+         both auth pills and the menu trigger together measure wider than the
+         viewport — and because body sets overflow-x:hidden that overflow is
+         clipped rather than scrollable, cutting off the menu button, which is
+         the only navigation at this width. Login and Sign Up both live in the
+         overlay menu, so nothing becomes unreachable. */
       .authbtn {
+        display: none;
         border-radius: 0.875rem;
         transition:
           background 0.3s ease,
           opacity 0.3s ease;
+      }
+      @media (min-width: 640px) {
+        .authbtn {
+          display: inline-block;
+        }
       }
       .authbtn > span {
         display: inline-flex;
@@ -2312,9 +2338,17 @@
          BRAND LOCKUP — one image, sized per surface. `width: auto` keeps the
          762x279 aspect ratio while height matches the old icon + wordmark.
          =================================================================== */
+      /* The lockup is ~2.7:1, so height drives width. Phones keep the smaller
+         mark: at 4.44vw root a 3.5rem logo is ~159px wide and pushes the
+         header bar past 100px tall on a 375px screen. */
       .brandmark {
-        height: 3.5rem;
+        height: 2.75rem;
         width: auto;
+      }
+      @media (min-width: 640px) {
+        .brandmark {
+          height: 3.5rem;
+        }
       }
       /* The artwork is black; on dark surfaces it is knocked out to white. */
       .brandmark--light {
@@ -2726,4 +2760,189 @@
       }
       .hcard__tile-img.is-active {
         opacity: 1;
+      }
+
+      /* ===================================================================
+         PAGE HERO WITH A BACKGROUND PHOTO
+         The scrim is white, not dark, so the header and every text colour
+         behave exactly as they do on the plain heroes.
+         =================================================================== */
+      .page-hero--media {
+        position: relative;
+        overflow: hidden;
+      }
+      .page-hero__bg {
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.6;
+        z-index: 0;
+      }
+      .page-hero__scrim {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.60) 0%,
+          rgba(255, 255, 255, 0.48) 45%,
+          rgba(255, 255, 255, 0.84) 82%,
+          #ffffff 100%
+        );
+      }
+      /* Lifts the copy above both the photo and the scrim. */
+      .page-hero--media .page-hero__inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* ===================================================================
+         TEAM DIRECTORY — categories of profile cards. Empty frames show the
+         layout until real headshots exist.
+         =================================================================== */
+      .team-cat {
+        margin-top: 3.5rem;
+      }
+      .team-cat__head {
+        margin-bottom: 1.75rem;
+        padding-top: 1.75rem;
+        border-top: 1px solid #e6e5e2;
+      }
+      .team-cat__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+      }
+      .team-cat__blurb {
+        margin-top: 0.5rem;
+        max-width: 46ch;
+        font-size: 0.9375rem;
+        color: rgba(17, 17, 17, 0.55);
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      /* Circular headshot frame, centred in the card. */
+      .team-card {
+        text-align: center;
+      }
+      .team-card__photo {
+        position: relative;
+        margin-inline: auto;
+        max-width: 13rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 9999px;
+        background: #f1f0ee;
+        overflow: hidden;
+      }
+      .team-card__photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Headshots are portrait in a square frame, so `cover` has to discard
+           height. Anchoring to the top takes it all off the bottom and keeps
+           every face fully in frame. */
+        object-position: center top;
+      }
+      .team-card__name {
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      .team-card__role {
+        font-weight: 400;
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+        color: rgba(17, 17, 17, 0.55);
+      }
+      /* Stand-in for the name and role while a category has no real members. */
+      .team-card__skeleton {
+        display: block;
+        margin-inline: auto;
+        border-radius: 9999px;
+        background: #f1f0ee;
+      }
+      .team-card__skeleton--name {
+        margin-top: 1.25rem;
+        width: 7rem;
+        height: 0.875rem;
+      }
+      .team-card__skeleton--role {
+        margin-top: 0.625rem;
+        width: 5rem;
+        height: 0.75rem;
+      }
+      @media (min-width: 640px) {
+        .team-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .team-cat__title {
+          font-size: 1.875rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .team-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .team-cat {
+          margin-top: 4.5rem;
+        }
+      }
+
+      /* The owner sits alone above the disciplines: centred, and on a larger
+         frame than the four-up grids below. */
+      .team-cat--owner .team-cat__head {
+        text-align: center;
+      }
+      .team-cat--owner .team-cat__blurb {
+        margin-inline: auto;
+      }
+      .team-cat--owner .team-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+      /* justify-items:center shrinks the card to its text width, so the size
+         has to be set on the card — the photo then fills it. */
+      .team-cat--owner .team-card {
+        width: 100%;
+        max-width: 16rem;
+      }
+      .team-cat--owner .team-card__photo {
+        max-width: none;
+      }
+      .team-cat--owner .team-card__name {
+        font-size: 1.25rem;
+      }
+      .team-cat--owner .team-card__role {
+        font-size: 1rem;
+      }
+      @media (min-width: 640px) {
+        .team-cat--owner .team-card {
+          max-width: 22rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .team-cat--owner .team-card {
+          max-width: 26rem;
+        }
+        .team-cat--owner .team-card__name {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* ===================================================================
+         MEDIA HOVER ZOOM — the frame stays put and clips; only the image
+         scales. Both frames already have overflow:hidden, and the global
+         reduced-motion rule kills the transition for anyone who asks.
+         =================================================================== */
+      .team-card__photo img,
+      .about__media img {
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .team-card:hover .team-card__photo img,
+      .team-card:focus-within .team-card__photo img,
+      .about__media:hover img {
+        transform: scale(1.08);
       }

@@ -17,7 +17,7 @@ export function ProseSection({
 }) {
   return (
     <section className="services">
-      <div className="shell services__inner">
+      <div className="shell services__inner prose">
         <div className="reveal" style={vars({ "--ty": "10px" })}>
           <span className="eyebrow">{eyebrow}</span>
         </div>
