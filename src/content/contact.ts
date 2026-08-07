@@ -7,9 +7,9 @@
  */
 export const CONTACT = {
   email: "setupfx24@gmail.com",
-  whatsappDisplay: "+33 7 59 15 99 87",
+  whatsappDisplay: "+1 (908) 228-0305",
   /** wa.me needs the number as digits only, including the country code. */
-  whatsappHref: "https://wa.me/33759159987",
+  whatsappHref: "https://wa.me/19082280305",
   office:
     "9364hn 3 Fitzroy Place, Sauchiehall Street, Glasgow City Centre, G3 7RH, United Kingdom",
 };
