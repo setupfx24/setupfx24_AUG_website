@@ -15,6 +15,10 @@
         color: #111111;
         font-family: "Onest", sans-serif;
         overflow-x: hidden;
+        /* Long unbroken strings — an email, a URL, a slug — otherwise push past
+           the viewport on narrow phones, where overflow-x:hidden clips them
+           instead of letting them scroll. */
+        overflow-wrap: break-word;
       }
       a {
         color: inherit;
@@ -69,9 +73,13 @@
           font-size: 1.111111vw;
         }
       }
+      /* A pure vw scale collapses the tablet band: 1.5625vw puts the root at
+         12px on a 768px iPad and 10px at 640px, so body copy renders at 12px
+         and secondary copy at 10.5px. The clamp keeps the proportional scale
+         between 900px and 1024px but floors it at a readable size below that. */
       @media (max-width: 1024px) {
         html {
-          font-size: 1.5625vw;
+          font-size: clamp(14px, 1.5625vw, 16px);
         }
       }
       /* 639.98px, not 640px: the `sm` layout breakpoint is min-width:640px, so
@@ -79,9 +87,12 @@
          would apply at once — the four CreateBand pills go horizontal while the
          root is still 28.44px, overflowing the viewport. Stopping just short
          keeps every real width identical and removes the 1px collision. */
+      /* Capped as well as floored: unclamped, 4.444vw hands a 639px viewport a
+         28.4px root, so crossing 640px downwards nearly tripled every size.
+         Clamped, the step is 14px -> 18px instead of 10px -> 28.4px. */
       @media (max-width: 639.98px) {
         html {
-          font-size: 4.444444vw;
+          font-size: clamp(15px, 4.444444vw, 18px);
         }
       }
 
@@ -507,7 +518,11 @@
           display: flex;
         }
       }
-      @media (min-width: 1024px) {
+      /* 1200px, not 1024px. Six nav items plus the logo and both auth pills
+         measure ~1063px at 1024px, so the bar overflowed and body's
+         overflow-x:hidden clipped Sign Up off the right edge. iPad landscape
+         is exactly 1024px, so it kept the overlay menu instead. */
+      @media (min-width: 1200px) {
         .nav-primary {
           display: flex;
         }
@@ -2171,9 +2186,9 @@
       .authbtn--solid:hover {
         opacity: 0.85;
       }
-      /* The overlay menu is the only navigation below 1024px, so the trigger
+      /* The overlay menu is the only navigation below 1200px, so the trigger
          stays until the primary nav takes over. */
-      @media (min-width: 1024px) {
+      @media (min-width: 1200px) {
         .menu-btn {
           display: none;
         }
