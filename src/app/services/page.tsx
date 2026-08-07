@@ -82,7 +82,7 @@ export default function ServicesPage() {
         title={["Development services", "beyond the platform"]}
         sub="When your business model needs something our standard products don't cover, we build it."
         ctas={[
-          { label: "Request a Proposal", modal: true },
+          { label: "Request a Proposal", whatsapp: true },
           { label: "Book a Call", href: "/contact" },
         ]}
         chips={[
@@ -138,7 +138,7 @@ export default function ServicesPage() {
         title="Tell us what you need built"
         body="Send us the requirement. We'll come back with a scope, a timeline and an honest answer on whether we're the right team for it."
         ctas={[
-          { label: "Request a Proposal", modal: true },
+          { label: "Request a Proposal", whatsapp: true },
           { label: "Book a Call", href: "/contact" },
         ]}
       />

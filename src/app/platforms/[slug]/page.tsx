@@ -46,8 +46,8 @@ export default async function PlatformPage({ params }: PageProps) {
         title={platform.heroTitle}
         sub={platform.heroSub}
         ctas={[
-          { label: "Request a Demo", modal: true },
-          { label: "Talk to an Expert", modal: true },
+          { label: "Request a Demo", whatsapp: true },
+          { label: "Talk to an Expert", whatsapp: true },
         ]}
         chips={platform.tags}
       />
@@ -97,7 +97,7 @@ export default async function PlatformPage({ params }: PageProps) {
         title={platform.cta.title}
         body={platform.cta.body}
         ctas={[
-          { label: platform.cta.label, modal: true },
+          { label: platform.cta.label, whatsapp: true },
           { label: "All Platforms", href: "/platforms" },
         ]}
         micro="No obligation. No sales pressure. Just a straight conversation about your project."

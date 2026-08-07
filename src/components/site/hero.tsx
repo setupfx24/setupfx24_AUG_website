@@ -67,8 +67,8 @@ export function Hero() {
             data-gated
             style={vars({ "--ty": "10px", "--d": "750ms" })}
           >
-            {/* Opens WhatsApp rather than the request modal — the other
-                "Book a Free Demo" buttons on the site still use [data-modal]. */}
+            {/* Every demo / contact CTA on the site opens WhatsApp with the
+                greeting pre-typed — see WHATSAPP_CHAT_HREF in content/contact. */}
             <a
               suppressHydrationWarning
               className="pill pill--dark pill--arrow"

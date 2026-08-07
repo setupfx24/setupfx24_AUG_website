@@ -3,8 +3,10 @@ import Link from "next/link";
 
 import { ChipRow } from "./chip-row";
 import { vars } from "./css-vars";
+import { WHATSAPP_CHAT_HREF } from "@/content/contact";
 
-type Cta = { label: string; href?: string; modal?: boolean };
+/** `whatsapp` opens a chat with the greeting pre-typed, same as the hero CTA. */
+type Cta = { label: string; href?: string; whatsapp?: boolean };
 
 /**
  * Inner-page hero. Same eyebrow / title / pill vocabulary as the home hero,
@@ -76,8 +78,8 @@ export function PageHero({
             style={vars({ "--ty": "10px", "--d": "250ms" })}
           >
             {ctas.map((cta, i) =>
-              cta.modal ? (
-                <button
+              cta.whatsapp ? (
+                <a
                   suppressHydrationWarning
                   key={cta.label}
                   className={
@@ -85,8 +87,9 @@ export function PageHero({
                       ? "pill pill--dark pill--arrow"
                       : "pill pill--outline"
                   }
-                  type="button"
-                  data-modal
+                  href={WHATSAPP_CHAT_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span className="pill__scale" data-hover="pillScale">
                     <span className="pill__inner">
@@ -100,7 +103,7 @@ export function PageHero({
                       )}
                     </span>
                   </span>
-                </button>
+                </a>
               ) : (
                 <Link
                   key={cta.label}

@@ -25,6 +25,29 @@ export const WHATSAPP_CHAT_HREF = `${CONTACT.whatsappHref}?text=${encodeURICompo
   WHATSAPP_GREETING,
 )}`;
 
+/**
+ * The "Find us online" row.
+ *
+ * WhatsApp reuses the number above. Instagram and Facebook stay on "#" until
+ * the real profile URLs arrive — a dead placeholder is obvious the moment you
+ * click it, whereas a guessed handle looks right and silently 404s.
+ */
+export const SOCIAL_LINKS = [
+  {
+    label: "Instagram",
+    icon: "i-instagram",
+    // Canonical profile URL. The ?igsh= token on a copied mobile link is
+    // share tracking, not part of the address, so it is dropped here.
+    href: "https://www.instagram.com/setup.fx24",
+  },
+  {
+    label: "Facebook",
+    icon: "i-facebook",
+    href: "https://www.facebook.com/Setupfx24/",
+  },
+  { label: "WhatsApp", icon: "i-whatsapp", href: WHATSAPP_CHAT_HREF },
+];
+
 export type ContactRow = {
   label: string;
   value: string;

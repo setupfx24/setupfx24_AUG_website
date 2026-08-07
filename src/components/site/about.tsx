@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { vars } from "./css-vars";
+import { SOCIAL_LINKS } from "@/content/contact";
 
 export function About() {
   return (
@@ -32,25 +33,27 @@ export function About() {
             <div>
               <p className="about__social-label">Find us online</p>
               <div className="about__social">
-                <a
-                  className="social-chip social-chip--accent"
-                  href="#"
-                  aria-label="X / Twitter"
-                >
-                  <svg className="icon" data-hover="social">
-                    <use href="#i-x" />
-                  </svg>
-                </a>
-                <a className="social-chip" href="#" aria-label="Behance">
-                  <svg className="icon" data-hover="social">
-                    <use href="#i-dot" />
-                  </svg>
-                </a>
-                <a className="social-chip" href="#" aria-label="Dribbble">
-                  <svg className="icon" data-hover="social">
-                    <use href="#i-dot" />
-                  </svg>
-                </a>
+                {SOCIAL_LINKS.map((social, i) => {
+                  // Placeholder links stay in-tab; only real profiles open out.
+                  const isLive = social.href !== "#";
+                  return (
+                    <a
+                      key={social.label}
+                      className={
+                        i === 0 ? "social-chip social-chip--accent" : "social-chip"
+                      }
+                      href={social.href}
+                      aria-label={social.label}
+                      {...(isLive
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                    >
+                      <svg className="icon" data-hover="social">
+                        <use href={`#${social.icon}`} />
+                      </svg>
+                    </a>
+                  );
+                })}
               </div>
             </div>
             <Link className="pill pill--outline pill--arrow" href="/about">

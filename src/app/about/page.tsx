@@ -205,7 +205,7 @@ export default function AboutPage() {
         title="Let's talk about what you're building"
         body="Tell us your business model and target market. We'll show you the platform that fits and give you a straight answer on scope and timeline."
         ctas={[
-          { label: "Book a Free Demo", modal: true },
+          { label: "Book a Free Demo", whatsapp: true },
           { label: "Contact Us", href: "/contact" },
         ]}
       />

@@ -96,7 +96,7 @@ export default function PlatformsPage() {
         title={["Trading platforms,", "built and branded", "as yours"]}
         sub="Complete systems — terminal, back office, risk engine and reporting. Deployed under your name, configured to your business model."
         ctas={[
-          { label: "Book a Free Demo", modal: true },
+          { label: "Book a Free Demo", whatsapp: true },
           { label: "Compare Platforms", href: "#compare" },
         ]}
         chips={["Forex", "Indian Markets", "Prop Firms", "Custom Builds"]}
@@ -142,8 +142,8 @@ export default function PlatformsPage() {
         title="See the platform before you commit"
         body="Book a walkthrough. We'll show you the live system, the admin panel, and give you a written scope and timeline."
         ctas={[
-          { label: "Book a Free Demo", modal: true },
-          { label: "WhatsApp Us", href: "/contact" },
+          { label: "Book a Free Demo", whatsapp: true },
+          { label: "WhatsApp Us", whatsapp: true },
         ]}
         micro="No obligation. No sales pressure."
       />

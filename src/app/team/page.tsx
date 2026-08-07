@@ -52,7 +52,7 @@ export default function TeamPage() {
         title={["The people behind", "the platforms"]}
         sub="Alone we can do so little; together we can do so much. Every build is run by a dedicated project team, so you always know who is working on your platform and who to call."
         ctas={[
-          { label: "Work With Us", modal: true },
+          { label: "Work With Us", whatsapp: true },
           { label: "About the Company", href: "/about" },
         ]}
         bgImage="/images/about_banner.png"
@@ -76,7 +76,7 @@ export default function TeamPage() {
         title="Want this team on your project?"
         body="Tell us what you are building. We will put the right people on it and give you a written scope and timeline."
         ctas={[
-          { label: "Book a Free Demo", modal: true },
+          { label: "Book a Free Demo", whatsapp: true },
           { label: "Contact Us", href: "/contact" },
         ]}
         micro="No obligation. No sales pressure. Just a straight conversation about your project."

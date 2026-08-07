@@ -1,8 +1,10 @@
 import Link from "next/link";
 
 import { vars } from "./css-vars";
+import { WHATSAPP_CHAT_HREF } from "@/content/contact";
 
-type Cta = { label: string; href?: string; modal?: boolean };
+/** `whatsapp` opens a chat with the greeting pre-typed, same as the hero CTA. */
+type Cta = { label: string; href?: string; whatsapp?: boolean };
 
 /** Closing CTA, built on the dark stats panel already used on the home page. */
 export function CtaPanel({
@@ -57,16 +59,17 @@ export function CtaPanel({
                   </span>
                 </span>
               );
-              return cta.modal ? (
-                <button
+              return cta.whatsapp ? (
+                <a
                   suppressHydrationWarning
                   className={cls}
-                  type="button"
-                  data-modal
+                  href={WHATSAPP_CHAT_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={cta.label}
                 >
                   {inner}
-                </button>
+                </a>
               ) : (
                 <Link className={cls} href={cta.href ?? "#"} key={cta.label}>
                   {inner}

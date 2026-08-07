@@ -44,7 +44,7 @@ export default async function ServicePage({ params }: PageProps) {
         title={service.heroTitle}
         sub={service.heroSub}
         ctas={[
-          { label: "Request a Proposal", modal: true },
+          { label: "Request a Proposal", whatsapp: true },
           { label: "All Services", href: "/services" },
         ]}
         chips={service.chips}
@@ -67,7 +67,7 @@ export default async function ServicePage({ params }: PageProps) {
         title={service.cta.title}
         body={service.cta.body}
         ctas={[
-          { label: service.cta.label, modal: true },
+          { label: service.cta.label, whatsapp: true },
           { label: "Contact Us", href: "/contact" },
         ]}
         micro="No obligation. No sales pressure."

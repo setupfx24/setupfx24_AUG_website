@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { BrandLogo } from "./brand-logo";
 import { isNavItemActive, NAV_ITEMS } from "./nav-items";
+import { WHATSAPP_CHAT_HREF } from "@/content/contact";
 
 const DELAYS = ["80ms", "125ms", "170ms", "215ms", "305ms"];
 
@@ -73,14 +74,15 @@ export function NavMenu() {
             Sign Up
           </Link>
         </span>
-        <button
+        <a
           suppressHydrationWarning
           className="navmenu__cta"
-          type="button"
-          data-modal
+          href={WHATSAPP_CHAT_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Book a Free Demo →
-        </button>
+        </a>
       </div>
     </div>
   );

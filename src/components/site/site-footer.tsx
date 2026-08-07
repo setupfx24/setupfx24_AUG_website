@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { BrandLogo } from "./brand-logo";
 import { PixelCursorTrail } from "./pixel-cursor-trail";
+import { WHATSAPP_CHAT_HREF } from "@/content/contact";
 
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
@@ -33,11 +34,13 @@ export function SiteFooter() {
               <span>trading platform?</span>
             </span>
           </h2>
-          <button
+          {/* Opens WhatsApp with the greeting pre-typed, same as the hero. */}
+          <a
             suppressHydrationWarning
             className="pill pill--light pill--arrow"
-            type="button"
-            data-modal
+            href={WHATSAPP_CHAT_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="pill__scale" data-hover="pillScale">
               <span className="pill__inner">
@@ -49,7 +52,7 @@ export function SiteFooter() {
                 </span>
               </span>
             </span>
-          </button>
+          </a>
         </div>
 
         <div className="footer__cols">
