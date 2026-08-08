@@ -21,12 +21,12 @@ export type TeamCategory = {
 export const TEAM_CATEGORIES: TeamCategory[] = [
   {
     id: "owner",
-    title: "Owner",
+    title: "Leadership",
     blurb: "The person accountable for every platform we ship.",
     members: [
       {
         name: "Shivam Singh",
-        role: "Owner",
+        role: "Founder & Director",
         // The file on disk carries a space; encoded so the URL stays valid.
         image: "/images/Shivam%20Singh.png",
       },
