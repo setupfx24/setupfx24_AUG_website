@@ -66,13 +66,7 @@ export function NavMenu() {
 
       <div className="shell navmenu__bottom">
         <span>
-          <Link className="navmenu__cta" href="/login" data-menu-link>
-            Login
-          </Link>
-          {" · "}
-          <Link className="navmenu__cta" href="/signup" data-menu-link>
-            Sign Up
-          </Link>
+          Local time <span data-menu-clock></span>
         </span>
         <a
           suppressHydrationWarning
@@ -81,7 +75,7 @@ export function NavMenu() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Book a Free Demo →
+          Get Started →
         </a>
       </div>
     </div>

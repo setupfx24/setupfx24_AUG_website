@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BrandLogo } from "./brand-logo";
 import { vars } from "./css-vars";
 import { PrimaryNav } from "./primary-nav";
+import { WHATSAPP_CHAT_HREF } from "@/content/contact";
 
 export function SiteHeader() {
   return (
@@ -21,13 +22,16 @@ export function SiteHeader() {
         <PrimaryNav />
 
         <div className="header__right">
-          <Link className="authbtn authbtn--ghost" href="/login">
-            <span data-hover="menuBtn">Login</span>
-          </Link>
-          <Link className="authbtn authbtn--solid" href="/signup">
-            <span data-hover="menuBtn">Sign Up</span>
-          </Link>
-          {/* Below 1024px the primary nav is hidden, so this stays the way in. */}
+          {/* Same destination as every "Book a Free Demo" on the site. */}
+          <a
+            className="authbtn authbtn--solid"
+            href={WHATSAPP_CHAT_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span data-hover="menuBtn">Get Started</span>
+          </a>
+          {/* Below 1200px the primary nav is hidden, so this stays the way in. */}
           <button
             suppressHydrationWarning
             className="menu-btn"
