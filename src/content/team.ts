@@ -96,7 +96,7 @@ export const TEAM_CATEGORIES: TeamCategory[] = [
     members: [
       {
         name: "Suresh Chaudhary",
-        role: "Senior Sales Executive",
+        role: "Senior Manager",
         image: "/images/Suresh%20Chaudhary.png",
       },
       {
