@@ -11,7 +11,7 @@ export function About() {
         <div className="about__media reveal" style={vars({ "--ty": "16px" })}>
           <Image
             src="/images/banner1.png"
-            alt="The SetupFX24 trading terminal running on a laptop"
+            alt="The SetupFX trading terminal running on a laptop"
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
@@ -40,7 +40,9 @@ export function About() {
                     <a
                       key={social.label}
                       className={
-                        i === 0 ? "social-chip social-chip--accent" : "social-chip"
+                        i === 0
+                          ? "social-chip social-chip--accent"
+                          : "social-chip"
                       }
                       href={social.href}
                       aria-label={social.label}

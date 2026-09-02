@@ -66,27 +66,12 @@ export const TEAM_CATEGORIES: TeamCategory[] = [
         image: "/images/Shivam%20Kumar.png",
       },
       {
-        name: "Himanshu Sahu",
-        role: "Developer",
-        image: "/images/Himanshu%20Sahu.png",
-      },
-      {
-        name: "Richa Tiwari",
-        role: "Developer",
-        image: "/images/Richa%20Tiwari.png",
-      },
-      {
-        name: "Kamini Sahu",
-        role: "Developer",
-        image: "/images/Kamini%20Sahu.png",
-      },
-      {
         name: "Omkar Mishra",
         role: "Developer",
         image: "/images/Omkar%20Mishra.png",
       },
     ],
-    placeholders: 9,
+    placeholders: 6,
   },
   {
     id: "management",

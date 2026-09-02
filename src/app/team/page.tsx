@@ -7,9 +7,9 @@ import { SiteShell } from "@/components/site/site-shell";
 import { TeamGrid } from "@/components/site/team-grid";
 
 export const metadata: Metadata = {
-  title: "Our Team | SetupFX24",
+  title: "Our Team | SetupFX",
   description:
-    "The developers, designers, QA engineers and support staff who build and run SetupFX24 trading platforms.",
+    "The developers, designers, QA engineers and support staff who build and run SetupFX trading platforms.",
   alternates: { canonical: "/team" },
 };
 

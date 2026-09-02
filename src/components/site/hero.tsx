@@ -20,7 +20,7 @@ export function Hero() {
         <img
           id="liquidBase"
           src="/images/base_image.png"
-          alt="SetupFX24 trading platform"
+          alt="SetupFX trading platform"
           fetchPriority="high"
           decoding="async"
         />
@@ -32,7 +32,7 @@ export function Hero() {
         data-gated
         style={vars({ "--ty": "20px", "--o": "0.4", "--d": "300ms" })}
       >
-        SETUPFX24
+        SETUPFX
       </div>
 
       <div className="shell hero__grid">

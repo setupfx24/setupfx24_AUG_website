@@ -10,9 +10,9 @@ import {
 import { SiteShell } from "@/components/site/site-shell";
 
 export const metadata: Metadata = {
-  title: "Login | SetupFX24",
+  title: "Login | SetupFX",
   description:
-    "Sign in to your SetupFX24 account to reach your project team and platform documentation.",
+    "Sign in to your SetupFX account to reach your project team and platform documentation.",
   robots: { index: false, follow: false },
 };
 

@@ -1,7 +1,7 @@
 import { vars } from "./css-vars";
 
 const STATS = [
-  { count: "4", suffix: "", label: "Flagship platforms", delay: "0ms" },
+  { count: "100", suffix: "%", label: "White-label delivery", delay: "0ms" },
   { count: "120", suffix: "+", label: "Projects delivered", delay: "90ms" },
   { count: "8", suffix: "+", label: "Countries served", delay: "180ms" },
   { count: "24", suffix: "/7", label: "Support coverage", delay: "270ms" },

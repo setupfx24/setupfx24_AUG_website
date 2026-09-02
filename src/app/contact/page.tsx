@@ -9,16 +9,15 @@ import { SiteShell } from "@/components/site/site-shell";
 import { CONTACT_ROWS } from "@/content/contact";
 
 export const metadata: Metadata = {
-  title: "Contact SetupFX24 | Trading Platform Development Enquiries",
+  title: "Contact SetupFX | Trading Platform Development Enquiries",
   description:
-    "Get in touch with SetupFX24 for trading platform demos, project scoping and development enquiries. Reply within one business day.",
+    "Get in touch with SetupFX for trading platform demos, project scoping and development enquiries. Reply within one business day.",
 };
 
 const PLATFORM_OPTIONS = [
-  "Forex Trading Platform",
-  "Indian Trading Platform",
-  "Indian Prop Firm Platform",
-  "Forex Prop Firm Platform",
+  "Global Trading Platform",
+  "Global Prop Firm Platform",
+  "AI Trading Platform",
   "Custom Development",
   "Not sure yet",
 ];
@@ -44,7 +43,7 @@ const FAQS = [
     a: "It depends on scope and integrations. After the discovery call you get a written plan with dated milestones — and we hold to it.",
   },
   {
-    q: "Will the platform carry SetupFX24 branding?",
+    q: "Will the platform carry SetupFX branding?",
     a: "No. Every deployment is fully white-labelled. Your brand is the only brand your clients see.",
   },
   {

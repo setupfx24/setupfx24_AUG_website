@@ -50,7 +50,7 @@ export function TeamGrid({
           >
             {/* Decorative: the heading beside it already carries the meaning. */}
             <Image
-              src="/images/team_banner.png"
+              src="/images/team_banner1.png"
               alt=""
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"

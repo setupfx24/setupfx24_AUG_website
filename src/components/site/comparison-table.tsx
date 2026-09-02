@@ -1,33 +1,28 @@
 import { vars } from "./css-vars";
 
-const COLUMNS = [
-  "Forex Trading",
-  "Indian Trading",
-  "Indian Prop Firm",
-  "Forex Prop Firm",
-];
+const COLUMNS = ["Global Trading", "Global Prop Firm", "AI Trading"];
 
-const ROWS: Array<[string, string, string, string, string]> = [
+const ROWS: Array<[string, string, string, string]> = [
   [
     "Best for",
-    "Forex brokerages",
-    "Indian market brokers",
-    "Indian funded-trader firms",
-    "Global prop firms",
+    "Brokerages",
+    "Funded-trader firms",
+    "Automated and systematic desks",
   ],
   [
     "Markets",
     "FX, metals, indices, commodities, crypto CFDs",
     "Equity, F&O, currency, commodity",
-    "Indian instruments",
-    "FX and CFD instruments",
+    "Whichever venue you are authorised to use",
   ],
-  ["Challenge engine", "—", "—", "Yes", "Yes"],
-  ["Liquidity bridge", "Yes", "—", "—", "Yes"],
-  ["Copy trading", "Yes", "Optional", "Optional", "Optional"],
-  ["IB / affiliate", "Yes", "Yes", "Yes", "Yes"],
-  ["Mobile apps", "Yes", "Yes", "Yes", "Yes"],
-  ["White-label", "Yes", "Yes", "Yes", "Yes"],
+  ["Challenge engine", "—", "Yes", "—"],
+  ["Liquidity bridge", "Yes", "—", "Optional"],
+  ["AI strategy builder", "—", "—", "Yes"],
+  ["Algorithmic execution", "Optional", "—", "Yes"],
+  ["Copy trading", "Yes", "Optional", "Optional"],
+  ["IB / affiliate", "Yes", "Yes", "Optional"],
+  ["Mobile apps", "Yes", "Yes", "Yes"],
+  ["White-label", "Yes", "Yes", "Yes"],
 ];
 
 function Cell({ value }: { value: string }) {

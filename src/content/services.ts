@@ -28,7 +28,7 @@ export const SERVICES: Service[] = [
     rowTitle: "Trading Platform Development",
     rowDesc: "Complete terminals, back office and risk systems.",
     seo: {
-      title: "Trading Platform Development | SetupFX24",
+      title: "Trading Platform Development | SetupFX",
       description:
         "Complete trading platform development — terminal, admin back office, risk engine and reporting, built around your instruments and business model.",
     },
@@ -79,9 +79,9 @@ export const SERVICES: Service[] = [
     rowTitle: "White Label Solution",
     rowDesc: "Fully branded platforms delivered under your identity.",
     seo: {
-      title: "White-Label Trading Platform Deployment | SetupFX24",
+      title: "White-Label Trading Platform Deployment | SetupFX",
       description:
-        "Complete branding, configuration and launch of any SetupFX24 platform under your identity — your logo, domain, app listings and trading rules.",
+        "Complete branding, configuration and launch of any SetupFX platform under your identity — your logo, domain, app listings and trading rules.",
     },
     heroTitle: ["White-label deployment,", "branded as yours"],
     heroSub:
@@ -130,7 +130,7 @@ export const SERVICES: Service[] = [
     rowTitle: "Integration Services",
     rowDesc: "Payments, KYC, liquidity, CRM and third-party APIs.",
     seo: {
-      title: "Trading Platform Integration Services | SetupFX24",
+      title: "Trading Platform Integration Services | SetupFX",
       description:
         "Payment gateways, KYC and AML providers, liquidity feeds, market data, CRM systems and custom APIs — integrated during the build, not after it.",
     },
@@ -192,14 +192,19 @@ export const SERVICES: Service[] = [
     rowTitle: "Maintenance & Support",
     rowDesc: "Monitoring, updates and enhancement cycles after go-live.",
     seo: {
-      title: "Trading Platform Maintenance & Support | SetupFX24",
+      title: "Trading Platform Maintenance & Support | SetupFX",
       description:
-        "Uptime monitoring, issue resolution, security updates and scheduled enhancement cycles for live trading platforms built by SetupFX24.",
+        "Uptime monitoring, issue resolution, security updates and scheduled enhancement cycles for live trading platforms built by SetupFX.",
     },
     heroTitle: ["Support that continues", "after go-live"],
     heroSub:
       "Monitoring, updates and enhancement cycles — part of the relationship, not an upsell after the invoice clears.",
-    chips: ["Monitoring", "Issue resolution", "Security updates", "Enhancements"],
+    chips: [
+      "Monitoring",
+      "Issue resolution",
+      "Security updates",
+      "Enhancements",
+    ],
     overview: {
       title: "Go-live is the start, not the finish",
       body: [

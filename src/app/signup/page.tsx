@@ -12,9 +12,9 @@ import { SiteShell } from "@/components/site/site-shell";
 import { PLATFORMS } from "@/content/platforms";
 
 export const metadata: Metadata = {
-  title: "Create an Account | SetupFX24",
+  title: "Create an Account | SetupFX",
   description:
-    "Create a SetupFX24 account to book a platform demo and get a written scope and timeline for your project.",
+    "Create a SetupFX account to book a platform demo and get a written scope and timeline for your project.",
   robots: { index: false, follow: false },
 };
 
@@ -90,8 +90,7 @@ export default function SignupPage() {
 
           <div className="authsplit__terms">
             <AuthCheck name="noEmails">
-              I don&apos;t want to receive emails about SetupFX24 product
-              updates
+              I don&apos;t want to receive emails about SetupFX product updates
             </AuthCheck>
             <AuthCheck name="terms">
               By creating an account, you agree to our{" "}

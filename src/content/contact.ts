@@ -6,12 +6,15 @@
  * than a plausible-looking guess.
  */
 export const CONTACT = {
+  /** Registered legal entity, not the trading name used across the site. */
+  company: "Setupfx Softech OPC Pvt Ltd",
   email: "setupfx24@gmail.com",
   whatsappDisplay: "+1 (908) 228-0305",
   /** wa.me needs the number as digits only, including the country code. */
   whatsappHref: "https://wa.me/19082280305",
   office:
-    "9364hn 3 Fitzroy Place, Sauchiehall Street, Glasgow City Centre, G3 7RH, United Kingdom",
+    "4012, 4th Floor, Currency Tower, Vishal Nagar, Raipur, Chhattisgarh 492001",
+  gst: "22ABSCS5663H1ZX",
 };
 
 /**
@@ -54,8 +57,9 @@ export type ContactRow = {
   href?: string;
 };
 
-/** Email / WhatsApp / Office — the three details we actually have. */
+/** Legal identity first, then how to reach us, then where we are registered. */
 export const CONTACT_ROWS: ContactRow[] = [
+  { label: "Company", value: CONTACT.company },
   { label: "Email", value: CONTACT.email, href: `mailto:${CONTACT.email}` },
   {
     label: "WhatsApp",
@@ -63,4 +67,5 @@ export const CONTACT_ROWS: ContactRow[] = [
     href: CONTACT.whatsappHref,
   },
   { label: "Office", value: CONTACT.office },
+  { label: "GST No.", value: CONTACT.gst },
 ];

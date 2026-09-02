@@ -12,10 +12,10 @@ export function isNavItemActive(pathname: string, href: string) {
 
 /** Primary navigation. Shared by the header bar and the overlay menu. */
 export const NAV_ITEMS = [
-  { label: "Home", href: "/", caret: false },
-  { label: "Platforms", href: "/platforms", caret: false },
-  { label: "Services", href: "/services", caret: true },
-  { label: "About", href: "/about", caret: false },
-  { label: "Team", href: "/team", caret: false },
-  { label: "Contact", href: "/contact", caret: false },
+  { label: "Home", href: "/" },
+  { label: "Platforms", href: "/platforms" },
+  { label: "Services", href: "/services" },
+  { label: "Team", href: "/team" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];

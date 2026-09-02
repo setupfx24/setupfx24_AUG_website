@@ -8,9 +8,9 @@ import { PageHero } from "@/components/site/page-hero";
 import { SiteShell } from "@/components/site/site-shell";
 
 export const metadata: Metadata = {
-  title: "Trading Software Development Services | SetupFX24",
+  title: "Trading Software Development Services | SetupFX",
   description:
-    "Custom trading software development, white-label deployment, mobile apps, API and payment integration, and ongoing support from SetupFX24.",
+    "Custom trading software development, white-label deployment, mobile apps, API and payment integration, and ongoing support from SetupFX.",
 };
 
 const SERVICES = [

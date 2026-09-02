@@ -12,6 +12,8 @@ export type GridCard = {
   cta?: string;
   /** Optional background art. Decorative — the card carries its own title. */
   image?: string;
+  /** Renders across both columns. */
+  wide?: boolean;
 };
 
 /** The home-page platform card grid, reused verbatim for other card sections. */
@@ -52,7 +54,7 @@ export function CardGrid({
           {cards.map((card, i) => (
             <li
               key={card.title}
-              className="reveal"
+              className={card.wide ? "reveal is-wide" : "reveal"}
               style={vars({ "--ty": "48px", "--d": `${i * 90}ms` })}
             >
               <Link href={card.href}>

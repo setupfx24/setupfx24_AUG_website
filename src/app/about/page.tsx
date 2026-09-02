@@ -11,20 +11,20 @@ import { CONTACT_ROWS } from "@/content/contact";
 import { Stats } from "@/components/site/stats";
 
 export const metadata: Metadata = {
-  title: "About SetupFX24 | Trading Platform Development Company",
+  title: "About SetupFX | Trading Platform Development Company",
   description:
-    "SetupFX24 is a software development company building white-label trading platforms for forex brokers, Indian market brokers and prop firms.",
+    "SetupFX is a software development company building white-label trading platforms for forex brokers, Indian market brokers and prop firms.",
 };
 
 /** Slides for the "In short" split section. */
 const ABOUT_SLIDES = [
   {
     src: "/images/about1.png",
-    alt: "A SetupFX24 trading platform running on a client device",
+    alt: "A SetupFX trading platform running on a client device",
   },
   {
     src: "/images/about2.png",
-    alt: "A SetupFX24 platform build shown on screen",
+    alt: "A SetupFX platform build shown on screen",
   },
 ];
 
@@ -32,7 +32,7 @@ const ABOUT_SLIDES = [
 const TEAM_SLIDES = [
   {
     src: "/images/team1.png",
-    alt: "The SetupFX24 team at work in the development office",
+    alt: "The SetupFX team at work in the development office",
   },
   {
     src: "/images/team2.png",

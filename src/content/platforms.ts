@@ -25,6 +25,8 @@ export type Platform = {
   features: { title: string; items: ListItem[] };
   console: { title: string; items: ListItem[] };
   audience: { title: string; items: string[] };
+  /** Renders across both columns of the card grid. */
+  wide?: boolean;
   /** Prop-firm pages only: the configurable rule set. */
   rules?: { title: string; intro: string; items: string[] };
   faq: FaqItem[];
@@ -35,18 +37,18 @@ export const PLATFORMS: Platform[] = [
   {
     slug: "forex-trading-platform",
     meta: "Global Markets",
-    cardTitle: "Forex Trading Platform",
+    cardTitle: "Global Trading Platform",
     cardBody:
       "A complete multi-asset forex trading platform for brokerages operating in international markets.",
     cardImage: "/images/box_bg1.png",
     tags: ["Liquidity Bridge", "MAM/PAMM", "Copy Trading"],
     seo: {
       title:
-        "Forex Trading Platform Development | White Label Forex Software — SetupFX24",
+        "Global Trading Platform Development | White Label Forex Software — SetupFX",
       description:
         "Launch your forex brokerage with a white-label multi-asset trading platform. Liquidity integration, copy trading, MAM/PAMM, IB module and full back office.",
     },
-    heroTitle: ["Forex Trading Platform", "for Global Brokerages"],
+    heroTitle: ["Global Trading Platform", "for Global Brokerages"],
     heroSub:
       "A complete multi-asset trading system — branded as yours, integrated with your liquidity, and ready for real client volume.",
     overview: {
@@ -104,8 +106,12 @@ export const PLATFORMS: Platform[] = [
     console: {
       title: "Full Control From a Single Console",
       items: [
-        { title: "Client account creation, grouping and permission management" },
-        { title: "Symbol, spread, leverage, swap and commission configuration" },
+        {
+          title: "Client account creation, grouping and permission management",
+        },
+        {
+          title: "Symbol, spread, leverage, swap and commission configuration",
+        },
         { title: "Deposit and withdrawal approval workflows" },
         { title: "Live exposure and open position monitoring" },
         { title: "Trade, revenue and client activity reports" },
@@ -140,7 +146,7 @@ export const PLATFORMS: Platform[] = [
       },
     ],
     cta: {
-      title: "See the Forex Platform in Action",
+      title: "See the Global Trading Platform in Action",
       body: "Tell us what you are building. We will walk you through the architecture and give you a clear scope and timeline.",
       label: "Book Your Demo",
     },
@@ -149,18 +155,18 @@ export const PLATFORMS: Platform[] = [
   {
     slug: "indian-trading-platform",
     meta: "Indian Exchanges",
-    cardTitle: "Indian Trading Platform",
+    cardTitle: "Global Prop Firm Platform",
     cardBody:
       "A trading application built for Indian market participants, aligned with domestic exchange workflows.",
     cardImage: "/images/box_bg2.png",
     tags: ["Equity & F&O", "RMS", "Back Office"],
     seo: {
       title:
-        "Indian Trading Platform Development | Stock & F&O Trading Software — SetupFX24",
+        "Global Prop Firm Platform | Funded Trader Software — SetupFX",
       description:
         "Custom trading platform development for Indian markets — equity, F&O, currency and commodity segments with back office, RMS and mobile apps.",
     },
-    heroTitle: ["Trading Platform Built", "for Indian Markets"],
+    heroTitle: ["Global Prop Firm Platform", "for Global Operators"],
     heroSub:
       "A trading application designed around Indian exchange workflows, instruments and trader expectations — delivered under your brand.",
     overview: {
@@ -261,258 +267,124 @@ export const PLATFORMS: Platform[] = [
   },
 
   {
-    slug: "indian-prop-firm-platform",
-    meta: "Funded Trader Model",
-    cardTitle: "Indian Prop Firm Platform",
+    slug: "ai-trading-platform",
+    meta: "AI & Algorithmic Trading",
+    cardTitle: "AI Trading Platform",
     cardBody:
-      "A full prop-firm ecosystem tuned to Indian market instruments and trader expectations.",
+      "Build AI-driven strategies and run them as live algorithms — research, backtest and automate execution under your own brand.",
     cardImage: "/images/box_bg3.png",
-    tags: ["Challenge Engine", "Payouts"],
+    // Spans both columns of the card grid.
+    wide: true,
+    tags: ["AI Strategy Builder", "Algo Trading", "Backtesting"],
     seo: {
-      title:
-        "Indian Prop Firm Trading Platform | Funded Trader Software — SetupFX24",
+      title: "AI Trading Platform Development | Algo Trading Software — SetupFX",
       description:
-        "Launch your prop firm with a complete evaluation and funded-account platform built for Indian market instruments. Challenge engine, rule automation and payouts.",
+        "AI trading platform development — strategy builder, algorithmic execution, backtesting and risk controls, delivered white-label under your brand.",
     },
-    heroTitle: ["Prop Firm Platform", "for Indian Markets"],
+    heroTitle: ["AI Trading Platform", "strategies that run themselves"],
     heroSub:
-      "Run evaluations, monitor funded traders and automate payouts — on a platform built around Indian instruments and trader behaviour.",
+      "We build the AI strategy layer and the algorithmic engine that executes it — researched, backtested and deployed under your own brand.",
     overview: {
-      title: "The Complete Funded-Trader Ecosystem",
+      title: "From Strategy Idea to Live Algorithm",
       body: [
-        "A prop firm is three businesses in one: a marketing engine that sells challenges, a risk system that enforces rules without human error, and an operations desk that pays traders accurately and on time.",
-        "Our Indian Prop Firm Platform handles all three. You define the model — challenge phases, targets, drawdown limits, instruments, pricing — and the system enforces it automatically, around the clock.",
+        "Most trading businesses have strategy ideas long before they have a way to run them. The gap is the engineering: turning a thesis into rules a machine can follow, testing it against history, and executing it reliably when the market moves.",
+        "Our AI Trading Platform closes that gap. Strategies are built with AI assistance, validated against historical data, and deployed as live algorithms with the risk controls and monitoring a real book needs.",
       ],
     },
     features: {
       title: "Platform Features",
       items: [
         {
-          title: "Configurable Challenge Engine",
-          desc: "One-phase, two-phase or instant-funding models with parameters you control.",
+          title: "AI Strategy Builder",
+          desc: "Describe the logic you want and refine it with AI assistance, without writing the engine yourself.",
         },
         {
-          title: "Automated Rule Enforcement",
-          desc: "Profit targets, daily loss limits, maximum drawdown, minimum trading days and consistency rules applied in real time.",
+          title: "Algorithmic Execution",
+          desc: "Strategies run as live algorithms with configurable order routing, sizing and scheduling.",
         },
         {
-          title: "Live Account Monitoring",
-          desc: "Every account tracked continuously, with automatic breach detection and account status changes.",
+          title: "Backtesting Engine",
+          desc: "Validate a strategy against historical data before a single order reaches the market.",
         },
         {
-          title: "Trader Dashboard",
-          desc: "Traders see objectives, progress, equity curve, statistics and rule status in one place.",
+          title: "Paper Trading",
+          desc: "Run a finished strategy against live prices with simulated fills before committing capital.",
         },
         {
-          title: "Instrument & Session Controls",
-          desc: "Restrict instruments, lot sizes, holding periods or trading windows as your model requires.",
+          title: "Signal & Indicator Library",
+          desc: "Technical indicators and derived signals available as building blocks inside any strategy.",
         },
         {
-          title: "Payout Management",
-          desc: "Payout requests, approval workflow, profit-split calculation and payment records.",
+          title: "Risk Controls",
+          desc: "Per-strategy exposure caps, drawdown limits and automatic shut-off when a rule is breached.",
         },
         {
-          title: "Checkout & Payment Integration",
-          desc: "Challenge purchase flow with multiple payment methods and automated account provisioning.",
+          title: "Portfolio of Strategies",
+          desc: "Run several algorithms side by side with allocation and correlation visible in one view.",
         },
         {
-          title: "Affiliate & Referral System",
-          desc: "Track partners, apply discount codes and calculate commissions automatically.",
+          title: "Performance Analytics",
+          desc: "Returns, drawdown, win rate and per-strategy attribution, tracked continuously.",
         },
         {
-          title: "Analytics for Operators",
-          desc: "Pass rates, breach reasons, revenue by plan, trader cohort behaviour and payout exposure.",
+          title: "Broker & Data Integration",
+          desc: "Connect the market data feed and execution venue your business is authorised to use.",
         },
         {
-          title: "Admin Console",
-          desc: "Create plans, adjust rules, review accounts, manage traders and handle disputes.",
+          title: "API Access",
+          desc: "Programmatic access for teams that want to extend the platform or plug in their own models.",
         },
-      ],
-    },
-    rules: {
-      title: "Your Model, Your Parameters",
-      intro:
-        "Every prop firm competes on its rule set. Yours should not be locked to a template.",
-      items: [
-        "Account sizes and pricing tiers",
-        "Profit target percentages per phase",
-        "Daily loss and overall drawdown limits (static or trailing)",
-        "Minimum and maximum trading days",
-        "Consistency and lot-size restrictions",
-        "Profit split percentages and payout cycles",
-        "Free retry, reset and scaling-plan logic",
       ],
     },
     console: {
-      title: "Run the Programme From One Console",
+      title: "Operate the Engine From One Console",
       items: [
-        { title: "Create plans, adjust rules and clone configurations" },
-        { title: "Review accounts, trade history and breach events" },
-        { title: "Manage traders, resets and upgrades" },
-        { title: "Handle disputes with a documented audit trail" },
-        { title: "Track pass rates, breach reasons and revenue by plan" },
-        { title: "Monitor payout exposure across the book" },
+        { title: "Deploy, pause and roll back strategies without a release" },
+        { title: "Monitor live positions, fills and latency across every algorithm" },
+        { title: "Set exposure, drawdown and instrument limits per strategy" },
+        { title: "Review backtest and live performance side by side" },
+        { title: "Manage users, permissions and API keys" },
+        { title: "Full audit trail of every deployment and parameter change" },
       ],
     },
     audience: {
       title: "Built For",
       items: [
-        "New prop firms launching in the Indian market",
-        "Trading educators converting an audience into a funded program",
-        "Existing firms outgrowing a rented or limited platform",
-        "Operators running multiple brands from one back end",
+        "Brokerages adding automated trading for their clients",
+        "Prop firms running systematic strategies in-house",
+        "Fintech founders launching an algo trading product",
+        "Trading desks moving from manual execution to automation",
       ],
     },
     faq: [
       {
-        q: "Can we design our own challenge rules?",
-        a: "Yes. Every parameter is configurable, and custom rule logic can be developed.",
+        q: "Do we need a quant team to use it?",
+        a: "No. The strategy builder is designed so a trader can express logic with AI assistance. A quant team can go further through the API, but is not a requirement.",
       },
       {
-        q: "How fast are rule breaches detected?",
-        a: "Monitoring runs continuously, with breaches actioned automatically rather than reviewed manually.",
+        q: "Can we bring our own models?",
+        a: "Yes. The platform exposes an API so your own models and signals can drive strategies alongside the built-in tools.",
       },
       {
-        q: "Can we run multiple plans at once?",
-        a: "Yes — unlimited plans, each with independent pricing and rules.",
+        q: "How is a strategy tested before it goes live?",
+        a: "Backtesting against historical data, then paper trading against live prices with simulated fills. Both run inside the platform.",
       },
       {
-        q: "Does it handle payouts?",
-        a: "The platform manages the request, approval and calculation workflow, and integrates with your payment provider for disbursement.",
+        q: "Which markets and brokers does it support?",
+        a: "We integrate the market data and execution infrastructure your business is authorised to use. The venues are agreed during scoping.",
       },
       {
-        q: "Is this a regulated activity?",
-        a: "Prop firm models sit in a developing regulatory area, and treatment varies by jurisdiction and by how the offering is structured. We supply the technology; you should take independent legal advice on how your specific model must be structured and disclosed in India.",
+        q: "Does an AI strategy guarantee profit?",
+        a: "No. AI and automation remove manual error and let you test ideas properly — they do not remove market risk. Past backtest performance is not a prediction of future results.",
       },
     ],
     cta: {
-      title: "Launch Your Prop Firm",
-      body: "Send us your challenge model and target trader base. We will show you the engine running your rules.",
+      title: "Build Your AI Trading Platform",
+      body: "Tell us the strategies you want to run and the markets you trade. We will show you the engine and give you a scope and timeline.",
       label: "Book a Demo",
     },
   },
 
-  {
-    slug: "forex-prop-firm-platform",
-    meta: "Global Funded Trading",
-    cardTitle: "Forex Prop Firm Platform",
-    cardBody:
-      "Everything you need to launch and scale an international forex prop firm, under your own brand.",
-    cardImage: "/images/box_bg4.png",
-    tags: ["Multi-phase", "KYC", "Payout Automation"],
-    seo: {
-      title:
-        "Forex Prop Firm Platform | White Label Funded Trader Software — SetupFX24",
-      description:
-        "Complete forex prop firm software — challenge engine, real-time rule enforcement, trader dashboard, payment integration and payout automation. Fully white-labelled.",
-    },
-    heroTitle: ["Forex Prop Firm Platform", "for Global Operators"],
-    heroSub:
-      "Everything required to sell challenges, evaluate traders, fund accounts and manage payouts — under your brand, in your rules.",
-    overview: {
-      title: "Built to Scale With Your Firm",
-      body: [
-        "The global prop firm market moves fast. Traders compare rule sets, payout speed and platform quality before they buy — and they talk publicly when any of the three disappoints.",
-        "Our Forex Prop Firm Platform is engineered for that environment: automated evaluation, transparent trader-facing metrics, reliable performance during volatile sessions, and an operator console that gives you full visibility into risk and revenue.",
-      ],
-    },
-    features: {
-      title: "Platform Features",
-      items: [
-        {
-          title: "Multi-Model Challenge Engine",
-          desc: "Single-phase, two-phase, three-phase or instant funding, running simultaneously.",
-        },
-        {
-          title: "Real-Time Rule Enforcement",
-          desc: "Drawdown, daily loss, profit targets, trading days and consistency rules enforced automatically.",
-        },
-        {
-          title: "Trader Portal",
-          desc: "Objectives, live progress, statistics, certificates, payout history and support access.",
-        },
-        {
-          title: "Trading Terminal Integration",
-          desc: "Deploy with our own terminal or integrate with the trading environment your traders expect.",
-        },
-        {
-          title: "Instrument & News Restrictions",
-          desc: "Configure permitted instruments, weekend holding and news-trading rules.",
-        },
-        {
-          title: "Scaling Plans",
-          desc: "Automated account growth for consistently profitable traders.",
-        },
-        {
-          title: "Payout Automation",
-          desc: "Request workflow, profit split calculation, approval chain and payment integration.",
-        },
-        {
-          title: "Checkout & Billing",
-          desc: "Multi-currency payment options, discount codes and automatic account delivery.",
-        },
-        {
-          title: "Affiliate Network",
-          desc: "Multi-tier partner tracking, custom commission structures and performance dashboards.",
-        },
-        {
-          title: "KYC & Verification",
-          desc: "Trader identity checks integrated into onboarding and payout flows.",
-        },
-        {
-          title: "Operator Analytics",
-          desc: "Revenue by plan, pass and breach ratios, payout liability and cohort performance.",
-        },
-      ],
-    },
-    console: {
-      title: "Run the Firm From One Place",
-      items: [
-        { title: "Create, clone and edit challenge plans in minutes" },
-        { title: "Review individual accounts, trade history and breach events" },
-        { title: "Approve payouts with a documented audit trail" },
-        { title: "Manage traders, resets, upgrades and disputes" },
-        { title: "Monitor total funded exposure across the book" },
-        { title: "Configure staff roles and permissions" },
-      ],
-    },
-    audience: {
-      title: "Built For",
-      items: [
-        "Founders launching an international prop firm",
-        "Existing firms migrating away from restrictive platforms",
-        "Brokerages adding a funded-trader division",
-        "Operators running multiple brands from shared infrastructure",
-      ],
-    },
-    faq: [
-      {
-        q: "Can we launch with our own rule structure?",
-        a: "Yes — the engine is parameter-driven, and bespoke rules can be developed.",
-      },
-      {
-        q: "Can we run several brands on one back end?",
-        a: "Yes. Multi-brand deployment is supported.",
-      },
-      {
-        q: "How are payouts calculated?",
-        a: "Automatically, based on your configured profit split and payout cycle, with full records for each transaction.",
-      },
-      {
-        q: "Is the platform white-labelled?",
-        a: "Completely. Your brand appears throughout the trader journey, from checkout to payout.",
-      },
-      {
-        q: "What about regulation?",
-        a: "Requirements differ significantly by jurisdiction and by how the offering is marketed and structured. We provide the software; obtaining appropriate legal advice and any required authorisations in the markets you serve is your responsibility.",
-      },
-    ],
-    cta: {
-      title: "Start Building Your Prop Firm",
-      body: "Tell us your rule set, your markets and your payout model. We will show you the platform that runs it.",
-      label: "Book a Demo",
-    },
-  },
 ];
 
 export function getPlatform(slug: string) {

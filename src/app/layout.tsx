@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from "next";
 import "./site.css";
 
 export const metadata: Metadata = {
-  title: "SetupFX24 — Trading Platform Development Company",
+  title: "SetupFX — Trading Platform Development Company",
   description:
-    "SetupFX24 builds white-label trading platforms for forex brokers, Indian market brokers and prop firms. Custom development, fast deployment, 24/7 support.",
+    "SetupFX builds white-label trading platforms for forex brokers, Indian market brokers and prop firms. Custom development, fast deployment, 24/7 support.",
 };
 
 export const viewport: Viewport = {

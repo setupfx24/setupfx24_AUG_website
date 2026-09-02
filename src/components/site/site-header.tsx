@@ -13,7 +13,7 @@ export function SiteHeader() {
       style={vars({ "--ty": "-14px", "--d": "150ms" })}
     >
       <div className="shell header__bar">
-        <Link href="/" aria-label="SetupFX24 — home">
+        <Link href="/" aria-label="SetupFX — home">
           <span className="brand" data-hover="brandLogo">
             <BrandLogo priority />
           </span>

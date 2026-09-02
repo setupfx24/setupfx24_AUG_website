@@ -23,7 +23,7 @@ export function Platforms() {
           {PLATFORMS.map((platform, i) => (
             <li
               key={platform.slug}
-              className="reveal"
+              className={platform.wide ? "reveal is-wide" : "reveal"}
               style={vars({ "--ty": "48px", "--d": `${i * 90}ms` })}
             >
               <Link href={`/platforms/${platform.slug}`}>

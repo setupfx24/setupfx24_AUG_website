@@ -12,10 +12,9 @@ const COMPANY_LINKS = [
 ];
 
 const PLATFORM_LINKS = [
-  "Forex Trading Platform",
-  "Indian Trading Platform",
-  "Indian Prop Firm Platform",
-  "Forex Prop Firm Platform",
+  "Global Trading Platform",
+  "Global Prop Firm Platform",
+  "AI Trading Platform",
 ];
 
 const SOCIAL_LINKS = ["LinkedIn", "Instagram", "Facebook", "YouTube"];
@@ -107,8 +106,16 @@ export function SiteFooter() {
           </div>
         </div>
 
+        <p className="footer__disclaimer">
+          <strong className="footer__disclaimer-label">Disclaimer:-</strong>{" "}
+          SetupFX is a software development company only. We build and license
+          trading technology; we do not trade, broker, hold, manage or handle
+          client funds, and we provide no financial, investment or advisory
+          services.
+        </p>
+
         <div className="footer__legal">
-          <p>© 2026 SetupFX24. All rights reserved.</p>
+          <p>© 2026 SetupFX. All rights reserved.</p>
           <div className="footer__legal-links">
             <a className="alink" href="#privacy" data-legal>
               <span>Privacy</span>
@@ -120,7 +127,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="footer__wm" aria-hidden="true">
-        SETUPFX24
+        SETUPFX
       </div>
     </footer>
   );

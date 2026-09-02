@@ -1,7 +1,7 @@
 import Lenis from "lenis";
 
 /**
- * Every interactive behaviour of the SetupFX24 page, ported verbatim from the
+ * Every interactive behaviour of the SetupFX page, ported verbatim from the
  * original single-file build. The logic is deliberately imperative and driven
  * by `data-*` attributes so the markup stays plain JSX — React never re-renders
  * these nodes, so direct DOM mutation is safe.
@@ -104,10 +104,12 @@ export function initSite(): () => void {
     apply: (x: Vars<K>) => void;
   }
 
-  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)")
-    .matches;
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
-    .matches;
+  const canHover = window.matchMedia(
+    "(hover: hover) and (pointer: fine)",
+  ).matches;
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
   function springHover<K extends string>(
     trigger: Element,
@@ -287,7 +289,8 @@ export function initSite(): () => void {
         to: { x: 5 },
         tension: 300,
         friction: 18,
-        apply: (v) => (badge.style.transform = `translateX(${v.x.toFixed(3)}px)`),
+        apply: (v) =>
+          (badge.style.transform = `translateX(${v.x.toFixed(3)}px)`),
       });
   });
 
@@ -326,11 +329,9 @@ export function initSite(): () => void {
   document.querySelectorAll<HTMLElement>(".lines").forEach((block) => {
     const base = Number(block.dataset.lineDelay || 0);
     const stagger = Number(block.dataset.lineStagger || 0);
-    block
-      .querySelectorAll<HTMLElement>(".line > span")
-      .forEach((span, i) => {
-        span.style.setProperty("--ld", base + i * stagger + "ms");
-      });
+    block.querySelectorAll<HTMLElement>(".line > span").forEach((span, i) => {
+      span.style.setProperty("--ld", base + i * stagger + "ms");
+    });
   });
 
   // Reveal on enter (mode: "once"). Hero items are gated on the loader finishing.
@@ -570,7 +571,13 @@ export function initSite(): () => void {
       );
       const w = img.width * scale;
       const h = img.height * scale;
-      coverCtx.drawImage(img, (cover.width - w) / 2, (cover.height - h) / 2, w, h);
+      coverCtx.drawImage(
+        img,
+        (cover.width - w) / 2,
+        (cover.height - h) / 2,
+        w,
+        h,
+      );
 
       // Tint once here rather than per stamp — this canvas is only rebuilt on
       // resize, so the brush loop stays cheap. Cover math fills the canvas
@@ -681,7 +688,9 @@ export function initSite(): () => void {
       if (!canvas!.width || !imgReady) return;
 
       // Clamp the delta so a background tab does not resume with one huge step.
-      const dt = lastFrame ? Math.min((now - lastFrame) / 1000, 1 / 30) : 1 / 60;
+      const dt = lastFrame
+        ? Math.min((now - lastFrame) / 1000, 1 / 30)
+        : 1 / 60;
       lastFrame = now;
 
       // Ease the brush toward the pointer and paint the segment it covered.
@@ -971,7 +980,9 @@ export function initSite(): () => void {
     if (!track) return;
     const count = track.children.length;
     if (count < 2) return;
-    const dots = [...(root.querySelector("[data-slider-dots]")?.children ?? [])];
+    const dots = [
+      ...(root.querySelector("[data-slider-dots]")?.children ?? []),
+    ];
     let index = 0;
 
     function render(next: number) {

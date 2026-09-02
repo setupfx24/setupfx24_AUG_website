@@ -11,9 +11,9 @@ import { PLATFORMS } from "@/content/platforms";
 
 export const metadata: Metadata = {
   title:
-    "Trading Platforms | Forex, Indian Market & Prop Firm Software — SetupFX24",
+    "Trading Platforms | Forex, Indian Market & Prop Firm Software — SetupFX",
   description:
-    "Four white-label trading platforms — forex, Indian markets, and prop firm software for both. Built, branded and deployed by SetupFX24.",
+    "Four white-label trading platforms — forex, Indian markets, and prop firm software for both. Built, branded and deployed by SetupFX.",
 };
 
 /** Same source as the home grid and the detail pages, so copy stays in sync. */
@@ -24,6 +24,7 @@ const PLATFORM_CARDS: GridCard[] = PLATFORMS.map((platform) => ({
   tags: platform.tags,
   href: `/platforms/${platform.slug}`,
   image: platform.cardImage,
+  wide: platform.wide,
 }));
 
 const INCLUDED = [

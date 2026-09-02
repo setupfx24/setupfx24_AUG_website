@@ -29,7 +29,6 @@ export function PrimaryNav() {
               >
                 <span data-hover={active ? undefined : "navLift"}>
                   {item.label}
-                  {item.caret && <i className="caret">▾</i>}
                 </span>
               </Link>
             </li>
